@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoverArquviosCsharp", "MoverArquviosCsharp\MoverArquviosCsharp.csproj", "{BC1F0D27-7D73-447F-AF44-3506F60D17F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC1F0D27-7D73-447F-AF44-3506F60D17F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC1F0D27-7D73-447F-AF44-3506F60D17F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC1F0D27-7D73-447F-AF44-3506F60D17F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC1F0D27-7D73-447F-AF44-3506F60D17F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF315910-FC3A-4686-9E80-AD5271120670}
+	EndGlobalSection
+EndGlobal
