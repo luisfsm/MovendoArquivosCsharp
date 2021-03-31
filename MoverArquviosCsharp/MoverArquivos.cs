@@ -7,12 +7,28 @@ namespace MoverArquviosCsharp
 {
     class MoverArquivos
     {
+        private string diretorioAtual;
+        private string diretorioFinal;
+
+
         public void MoverArquivosDiretorios(string diretorioAtual, string diretoriofinal)
         {
             string[] listarArquivos = System.IO.Directory.GetFiles(diretorioAtual);
 
             foreach (string arquivo in listarArquivos) {
-                Console.WriteLine(arquivo);
+                try
+                {
+                    System.IO.Directory.Move(arquivo, diretoriofinal);
+                }
+                catch(Exception e){
+                    Console.Write("erro ao mover");
+
+                }
+                finally
+                {
+                    Console.WriteLine("Arquivo movido : " + arquivo);
+                }
+               
             }
         }
 
