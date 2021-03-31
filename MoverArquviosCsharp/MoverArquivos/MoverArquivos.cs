@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace MoverArquviosCsharp
+
+namespace MoverArquviosCsharp.Mover
 {
     class MoverArquivos
     {
@@ -17,6 +18,7 @@ namespace MoverArquviosCsharp
                 {
                    string  nomerquivo = System.IO.Path.GetFileName(arquivo);
                     string destinoArquivo = System.IO.Path.Combine(diretoriofinal, nomerquivo);
+
                     System.IO.File.Move(arquivo, destinoArquivo, true);
 
                     Console.WriteLine(arquivo + "\n" + nomerquivo + "\n" + destinoArquivo);
