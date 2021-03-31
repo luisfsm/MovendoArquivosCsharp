@@ -6,7 +6,10 @@ namespace MoverArquviosCsharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MoverArquivos moverArquivos = new MoverArquivos();
+
+            moverArquivos.MoverArquivosDiretorios("C:\\arquivos", "C:\\movido");
+           
         }
     }
 }
