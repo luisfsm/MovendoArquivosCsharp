@@ -11,8 +11,12 @@ namespace MoverArquviosCsharp.Mover
 
         public void MoverArquivosDiretorios(string diretorioAtual, string diretoriofinal)
         {
-            string[] listarArquivos = System.IO.Directory.GetFiles(diretorioAtual);
+            CriarDiretorio(diretorioAtual);
+            CriarDiretorio(diretoriofinal);
 
+            string[] listarArquivos = System.IO.Directory.GetFiles(diretorioAtual);
+            
+            
             foreach (string arquivo in listarArquivos) {
                 try
                 {
@@ -27,7 +31,24 @@ namespace MoverArquviosCsharp.Mover
                     Console.Write(e.ToString());
                 }
             }
+            Console.WriteLine("Não existe mais arquivos para processar");
             Console.WriteLine("clique em qualquer botao pra encerrar");
+        }
+
+       private void CriarDiretorio(string diretorio)
+        {
+            try
+            {
+                if (!System.IO.Directory.Exists(diretorio))
+                {
+                    System.IO.Directory.CreateDirectory(diretorio);
+                    Console.WriteLine("criando o diretorio : " + diretorio);
+                }
+
+            }
+            catch (Exception e) {
+                Console.WriteLine(e.ToString());
+            }
         }
 
     }

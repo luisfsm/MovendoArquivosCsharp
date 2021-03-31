@@ -9,8 +9,9 @@ namespace MoverArquviosCsharp
         {
             MoverArquivos moverArquivos = new MoverArquivos();
 
-            moverArquivos.MoverArquivosDiretorios("C:\\arquivos", "C:\\movidos");
+            moverArquivos.MoverArquivosDiretorios("C:\\arquivos", "C:\\movido");
            
         }
     }
 }
+
