@@ -7,9 +7,6 @@ namespace MoverArquviosCsharp
 {
     class MoverArquivos
     {
-        private string diretorioAtual;
-        private string diretorioFinal;
-
 
         public void MoverArquivosDiretorios(string diretorioAtual, string diretoriofinal)
         {
@@ -18,18 +15,17 @@ namespace MoverArquviosCsharp
             foreach (string arquivo in listarArquivos) {
                 try
                 {
-                    System.IO.Directory.Move(arquivo, diretoriofinal);
+                   string  nomerquivo = System.IO.Path.GetFileName(arquivo);
+                    string destinoArquivo = System.IO.Path.Combine(diretoriofinal, nomerquivo);
+                    System.IO.File.Move(arquivo, destinoArquivo, true);
+
+                    Console.WriteLine(arquivo + "\n" + nomerquivo + "\n" + destinoArquivo);
                 }
                 catch(Exception e){
-                    Console.Write("erro ao mover");
-
+                    Console.Write(e.ToString());
                 }
-                finally
-                {
-                    Console.WriteLine("Arquivo movido : " + arquivo);
-                }
-               
             }
+            Console.WriteLine("clique em qualquer botao pra encerrar");
         }
 
     }
